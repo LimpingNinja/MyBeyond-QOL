@@ -1,3 +1,12 @@
+export function initSetup() {
+    // get all the game.settings.("minor-qol", ...)
+    fetchParams();
+}
+
+export let fetchParams = () => {
+    itemDeleteCheck = game.settings.get("mybeyond-qol", "ItemDeleteCheck");
+}
+  
 let itemDeleteHandler = ev => {
     let actor = game.actors.get(ev.data.data.actor._id);
     let d = new Dialog({
@@ -31,6 +40,13 @@ Hooks.on('init', () => {
 
     const defaultTag = ".item .item-image";
     // remove current handler - this is a bit clunky since it results in a case with no delete handler
+});
+
+let enableSheetQOL = (app, html, data) => {
     $(html).find(".item-delete").off("click");
     $(html).find(".item-delete").click({ app: app, data: data }, itemDeleteHandler);
-});
+}
+
+for (let sheetName of Object.keys(knownSheets)) {
+    Hooks.on("render" + sheetName, enableSheetQOL);
+}
