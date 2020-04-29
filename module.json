@@ -2,7 +2,7 @@
     "name": "mybeyond-qol-theme",
     "title": "MyBeyond-QOL - D&D 5e Character Sheet Theme",
     "description": "Style your Character Sheet like your DnDBeyond, adds delete protection from MinorQOL",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "minimumCoreVersion": "0.4.4",
     "compatibleCoreVersion": "0.5.5",
     "author": "Frederik Eschmann (mod by LimpingNinja)",
@@ -23,5 +23,5 @@
     ],
     "url": "https://github.com/LimpingNinja/MyBeyond-QOL",
     "manifest": "https://raw.githubusercontent.com/LimpingNinja/MyBeyond-QOL/master/module.json",
-    "download": "https://github.com/LimpingNinja/MyBeyond-QOL/archive/1.2.2.zip"
+    "download": "https://github.com/LimpingNinja/MyBeyond-QOL/archive/1.2.3.zip"
 }

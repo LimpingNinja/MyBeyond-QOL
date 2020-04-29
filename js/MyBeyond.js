@@ -1,11 +1,14 @@
-export function initSetup() {
-    // get all the game.settings.("minor-qol", ...)
-    fetchParams();
-}
+var knownSheets = undefined;
 
-export let fetchParams = () => {
-    itemDeleteCheck = game.settings.get("mybeyond-qol", "ItemDeleteCheck");
-}
+knownSheets = {
+    BetterNPCActor5eSheet: ".item .rollable",
+    ActorSheet5eCharacter: ".item .item-image",
+    DynamicActorSheet5e: ".item .item-image",
+    ActorSheet5eNPC: ".item .item-image",
+    DNDBeyondCharacterSheet5e: ".item .item-name .item-image"
+  
+  //  Sky5eSheet: ".item .item-image",
+};
   
 let itemDeleteHandler = ev => {
     let actor = game.actors.get(ev.data.data.actor._id);
