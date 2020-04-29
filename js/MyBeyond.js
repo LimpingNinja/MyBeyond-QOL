@@ -14,8 +14,8 @@ let itemDeleteHandler = ev => {
     let actor = game.actors.get(ev.data.data.actor._id);
     let d = new Dialog({
         // localize this text
-        title: i18n("minor-qol.reallyDelete"),
-        content: `<p>${i18n("minor-qol.sure")}</p>`,
+        title: 'Really delete this item',
+        content: '<p>Are you Sure?</p>',
         buttons: {
             one: {
                 icon: '<i class="fas fa-check"></i>',
