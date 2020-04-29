@@ -30,10 +30,7 @@ Hooks.on('init', () => {
     $("head").append(`<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Noto+Sans:400,700|Open+Sans:400,700|Roboto+Condensed:400,700|Roboto:400,500,700&display=swap" rel="stylesheet">`);
 
     const defaultTag = ".item .item-image";
-    //Add a check for item deletion
-    if (itemDeleteCheck) {
-        // remove current handler - this is a bit clunky since it results in a case with no delete handler
-        $(html).find(".item-delete").off("click");
-        $(html).find(".item-delete").click({ app: app, data: data }, itemDeleteHandler);
-    }
-})
+    // remove current handler - this is a bit clunky since it results in a case with no delete handler
+    $(html).find(".item-delete").off("click");
+    $(html).find(".item-delete").click({ app: app, data: data }, itemDeleteHandler);
+});
